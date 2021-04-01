@@ -9,10 +9,10 @@ int main()
 
 	int sizeQueue = 5;
 
-	std::cout << "Òåñò Queue\n";
+	std::cout << "Ð¢ÐµÑÑ‚ Queue\n";
 	queue<int> qu(sizeQueue);
 
-	std::cout << "Èñõîäíûå äàííûå:\n";
+	std::cout << "Ð˜ÑÑ…Ð¾Ð´Ð½Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ:\n";
 	srand(time(NULL));
 
 	for (int i = 0; i < sizeQueue ; i++)
@@ -39,7 +39,7 @@ int main()
 	qu.Pop();
 	std::cout << "Size - " << qu.Size() << "\n\n";
 
-	std::cout << "Pop èç ïóñòîãî Queue:\n";
+	std::cout << "Pop Ð¸Ð· Ð¿ÑƒÑÑ‚Ð¾Ð³Ð¾ Queue:\n";
 	try
 	{
 		qu.Pop();
@@ -51,7 +51,7 @@ int main()
 
 	std::cout << "\n\n";
 
-	std::cout << "Front èç ïóñòîãî Queue:\n";
+	std::cout << "Front Ð¸Ð· Ð¿ÑƒÑÑ‚Ð¾Ð³Ð¾ Queue:\n";
 	try
 	{
 		qu.Front();
@@ -63,7 +63,7 @@ int main()
 
 	std::cout << "\n\n";
 
-	std::cout << "Back èç ïóñòîãî Queue:\n";
+	std::cout << "Back Ð¸Ð· Ð¿ÑƒÑÑ‚Ð¾Ð³Ð¾ Queue:\n";
 	try
 	{
 		qu.Back();
@@ -82,12 +82,12 @@ int main()
 	}
 	qu.Print();
 
-	std::cout << "Ìèíèìàëüíûé ýëåìåíò - " << qu.FindMin() << "\n";
-	std::cout << "Ìàêñèìàëüíûé ýëåìåíò - " << qu.FindMax() << "\n";
+	std::cout << "ÐœÐ¸Ð½Ð¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ - " << qu.FindMin() << "\n";
+	std::cout << "ÐœÐ°ÐºÑÐ¸Ð¼Ð°Ð»ÑŒÐ½Ñ‹Ð¹ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚ - " << qu.FindMax() << "\n";
 
 	std::cout << "\n";
 
-	std::cout << "\nÄîáàâëåíèå ýëåìåíòà â çàïîëíåííûé stack:\n";
+	std::cout << "\nÐ”Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð° Ð² Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð½Ñ‹Ð¹ stack:\n";
 	try
 	{
 		qu.Put(3);
@@ -98,12 +98,12 @@ int main()
 	}
 
 	qu.InFile(PATH_FOR_FILE);
-	std::cout << "Î÷åðåäü íå èçìåíèëàñü: ";
+	std::cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð½Ðµ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ð»Ð°ÑÑŒ: ";
 	qu.Print();
 
 	queue<int> qu_2(sizeQueue);
 	qu_2.FromFile(PATH_FOR_FILE);
-	std::cout << "Î÷åðåäü ïîñëå ÷òåíèÿ èç ôàéëà: ";
+	std::cout << "ÐžÑ‡ÐµÑ€ÐµÐ´ÑŒ Ð¿Ð¾ÑÐ»Ðµ Ñ‡Ñ‚ÐµÐ½Ð¸Ñ Ð¸Ð· Ñ„Ð°Ð¹Ð»Ð°: ";
 	while (!qu_2.Empty())
 	{
 		std::cout << qu_2.Pop() << " ";
